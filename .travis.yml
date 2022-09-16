@@ -22,10 +22,10 @@ script:
   - docker build -t udagram-frontend ./udagram-frontend
 
 
-  - docker tag udagram-api-feed ninety5/udagram-api-feed:v1
-  - docker tag udagram-api-feed ninety5/udagram-api-user:v1
-  - docker tag udagram-api-feed ninety5/udagram-reverseproxy:v1
-  - docker tag udagram-api-feed ninety5/udagram-frontend:v1
+  - docker tag udagram-api-feed ninety5/udagram-api-feed:latest
+  - docker tag udagram-api-feed ninety5/udagram-api-user:latest
+  - docker tag udagram-api-feed ninety5/udagram-reverseproxy:latest
+  - docker tag udagram-api-feed ninety5/udagram-frontend:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
