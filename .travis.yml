@@ -13,6 +13,8 @@ install:
 # Scripts to be run such as tests
 before_script:
   - echo "no tests"
+  - echo "$DOCKER_PASSWORD"
+  - echo "DOCKER_USERNAME"
 
 script:
   - docker --version # print the version for logging
